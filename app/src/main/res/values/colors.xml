@@ -1,0 +1,30 @@
+<resources>
+    <!-- 背景 -->
+    <color name="bg">#F7F5F0</color>
+    <color name="bg_dark">#EEEAE0</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- 文字 -->
+    <color name="ink">#1A1C1E</color>
+    <color name="ink_soft">#44464A</color>
+    <color name="muted">#5F6368</color>
+    <color name="muted_light">#94989E</color>
+
+    <!-- 主题色 -->
+    <color name="accent">#1B6B5A</color>
+    <color name="accent_dark">#145246</color>
+    <color name="accent_soft">#E6F4EF</color>
+    <color name="accent_wash">#F2FAF7</color>
+
+    <!-- 辅色 -->
+    <color name="warm">#D4924A</color>
+    <color name="warm_soft">#FFF3E5</color>
+    <color name="rose">#C2545A</color>
+    <color name="sky">#517FA4</color>
+
+    <!-- 线条与阴影 -->
+    <color name="line">#E8E4D9</color>
+    <color name="line_strong">#D5D0C5</color>
+    <color name="shadow">#14000000</color>
+    <color name="shadow_light">#0A000000</color>
+</resources>

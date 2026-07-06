@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 阴影层 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/shadow_light" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <!-- 主卡片层（向下偏移2dp模拟阴影） -->
+    <item android:top="1dp" android:bottom="2dp" android:left="1dp" android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/surface" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>

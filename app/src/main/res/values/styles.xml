@@ -1,0 +1,23 @@
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarDividerColor">@color/line</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:buttonStyle">@style/ButtonPrimary</item>
+        <item name="android:editTextStyle">@style/EditTextStyle</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="android:style/Widget.Material.Light.Button">
+        <item name="android:textColor">@color/surface</item>
+        <item name="android:backgroundTint">@color/accent</item>
+    </style>
+
+    <style name="EditTextStyle" parent="android:style/Widget.Material.EditText">
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textColorHint">@color/muted_light</item>
+    </style>
+</resources>
