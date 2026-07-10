@@ -35,3 +35,8 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 }
+
+dependencies {
+    // 当前「共享 TODO 计划」为纯本地存储（SharedPreferences + JSON），
+    // 暂不依赖任何云服务 SDK；后续如需多设备实时协作，可在此处接入云端方案。
+}

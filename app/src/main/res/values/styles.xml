@@ -1,4 +1,14 @@
 <resources>
+    <!--
+        注意：这里不要再设置全局 android:buttonStyle。
+        之前设置过 ButtonPrimary（白字 + 墨绿底），本意是给个别自定义 Button 用，
+        但 App 里所有自定义按钮（如 WidgetFactory.navButton、各弹窗的保存/取消文案）
+        实际都是用 TextView 手绘的，从未依赖过这个全局按钮样式；
+        它唯一的实际效果是「污染」了系统 AlertDialog 默认的确定/取消按钮——
+        AlertDialog 按钮默认是「透明背景 + 强调色文字」的无边框样式，
+        一旦被全局改成「白字」，文字颜色和弹窗的暖白背景几乎融为一体，导致按钮文字看不清。
+        这正是所有系统 AlertDialog（新建计划、删除确认、重命名等）按钮不清晰的根因。
+    -->
     <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -7,17 +17,22 @@
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:navigationBarDividerColor">@color/line</item>
         <item name="android:colorAccent">@color/accent</item>
-        <item name="android:buttonStyle">@style/ButtonPrimary</item>
         <item name="android:editTextStyle">@style/EditTextStyle</item>
-    </style>
-
-    <style name="ButtonPrimary" parent="android:style/Widget.Material.Light.Button">
-        <item name="android:textColor">@color/surface</item>
-        <item name="android:backgroundTint">@color/accent</item>
+        <item name="android:alertDialogTheme">@style/AppAlertDialog</item>
     </style>
 
     <style name="EditTextStyle" parent="android:style/Widget.Material.EditText">
         <item name="android:textColor">@color/ink</item>
         <item name="android:textColorHint">@color/muted_light</item>
+    </style>
+
+    <!--
+        全 App 系统 AlertDialog 统一样式：标题/正文用墨色系，确定/取消按钮走强调色文字，
+        与「暖白底 + 墨绿主题色」的视觉语言保持一致，同时保证按钮文字清晰可辨。
+    -->
+    <style name="AppAlertDialog" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:background">@color/surface</item>
     </style>
 </resources>
